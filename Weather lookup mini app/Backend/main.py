@@ -31,7 +31,7 @@ def home():
             'icon': response['weather'][0]['icon']
         }
 
-    return render_template('../templates/index.html', weather=weather)
+    return render_template('index.html', weather=weather)
 
 if __name__ == '__main__':
     app.run(debug=True)
