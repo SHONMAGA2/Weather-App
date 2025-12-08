@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request
 import requests
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='../Frontend', static_url_path='/static')
+
 
 API_KEY = "e5a07dc691135b64e7af7ddfc3189dbb"  # your OpenWeatherMap key
 
@@ -30,7 +31,7 @@ def home():
             'icon': response['weather'][0]['icon']
         }
 
-    return render_template('index.html', weather=weather)
+    return render_template('../templates/index.html', weather=weather)
 
 if __name__ == '__main__':
     app.run(debug=True)
