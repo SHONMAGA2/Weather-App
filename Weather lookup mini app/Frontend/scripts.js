@@ -20,6 +20,7 @@ async function fetchWeather() {
         <p> Temperature: ${data.main.temp}C</p>
         <p>Condition: ${data.weather[0].description}</p>
         `;
+const API_KEY = "e5a07dc691135b64e7af7ddfc3189dbb";
 
     } catch (error) {
         document.getElementById("weather-info").innerHTML = "Network Issue";      
